@@ -1,0 +1,384 @@
+:root {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  font-display: block;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  letter-spacing: 1.8px;
+  line-height: 1.5;
+}
+
+.navbar {
+  /* background-color: antiquewhite; */
+  background-color:  #001f3f ;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+.navbar-brand {
+  font-size: 3rem;
+  color: #007bff;
+  font-weight: 700;
+}
+
+.nav-item {
+  font-size: 1.8rem;
+  margin: 0 10px;
+}
+
+.nav-link {
+  color: white;
+}
+
+.icon-white {
+  color: white;
+}
+
+/* name-taglne-company */
+
+.name-tagline-company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.name-tagline-company img {
+  height: 80vh;
+  position: relative;
+}
+
+.name-tagline-company .text-block {
+  position: absolute;
+  color: white;
+  position: absolute;
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+}
+.name-tagline-company button {
+  font-size: 3rem;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  color: #007bff;
+  font-weight: 700;
+}
+
+
+
+@media (max-width: 600px) {
+  .name-tagline-company .text-block {
+    font-size: 2rem;
+    padding: 5px;
+  }
+  .name-tagline-company button {
+    font-size: 1.8rem;
+    margin-top: 30px;
+  }
+  .navbar-brand {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 765px) {
+  .name-tagline-company .text-block {
+    font-size: 4rem;
+  }
+  .name-tagline-company button {
+    font-size: 2.7rem;
+    margin-top: 20px;
+  }
+}
+/* About us section */
+
+.About-us-sec,
+.our-services-section, .our-portfolio {
+  margin-top: 50px;
+}
+
+.About-us-sec .container .quote {
+  text-align: center;
+}
+
+.About-us-sec > h2,
+.our-services-section > h2,
+.our-portfolio > h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.About-us-sec .container-about-us span {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.About-us-sec .container-about-us p {
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+.container-about-us {
+  box-shadow: 5px 5px 15px 5px gray;
+  padding: 20px;
+  
+}
+
+.About-us-sec h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.About-us-sec img {
+  width: 100px;
+  height: 100px;
+}
+
+.technologies-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.technologies-container img {
+  margin: 10px;
+}
+@media (max-width:600px) {
+  .technologies-container {
+    justify-content: space-evenly;
+  }
+
+  .About-us-sec img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Our services */
+.our-services-section, .contact-section {
+  background-color: #f3f5f9;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.grid-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(375px, 1fr) minmax(375px, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+.grid-container img {
+  width: 420px;
+  height: 450px;
+}
+.grid-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px gainsboro outset;
+  box-shadow: 2px 2px 10px 2px gray;
+}
+
+.services-icons {
+  color: #007bff;
+}
+
+.our-services-section h3 {
+  font-size: 2.4rem;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.our-services-section li {
+  font-size: 1.8rem;
+  margin-top: 5px;
+}
+
+@media (max-width:600px) {
+  .grid-container{
+    grid-template-columns: 375px;
+    grid-template-rows: repeat(6, 1fr);
+    max-width: 375px;
+  }
+  .grid-container img {
+    width: 375px;
+  }
+  .our-services-section h3 {
+    font-size: 2rem;
+  }
+
+  .our-services-section li {
+    font-size: 1.3rem;
+  }
+
+  .grid-item {
+    border: none;
+    border-bottom: 1px outset gainsboro;
+  }
+} 
+
+@media (min-width:768px) {
+  .grid-container img {
+    width: 375px;
+}
+
+}
+
+/* our portfolio */
+
+.our-potfolio {
+  max-width: 900px;
+    border: 5px outset gainsboro;
+    box-shadow: 2px 2px 10px 2px gray;
+
+}
+
+
+.portfolio-container {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+
+}
+
+.portfolio-container .animation-portfolio {
+  width: 900px;
+  height: 400px;
+  background-image: url(/assets/website-1.jpeg);
+  background-size: cover;
+  animation: portfolio infinite 50s;
+}
+
+@keyframes portfolio {
+  0% {
+    background-image: url(/assets/website-2.jpeg);
+  }
+
+  10% {
+    background-image: url(/assets/website-3.jpeg);
+  }
+  20% {
+    background-image: url(/assets/website-4-4.jpeg);
+  }
+  30% {
+    background-image: url(/assets/website-5.jpeg);
+  }
+  40% {
+    background-image: url(/assets/website-6.jpeg);
+  }
+  65% {
+    background-image: url(/assets/website-6.jpeg);
+  }
+  80% {
+    background-image: url(/assets/website-7.jpeg);
+  }
+  100% {
+    background-image: url(/assets/website-8.jpeg);
+  }
+
+}
+
+@media (max-width:600px) {
+  .our-portfolio {
+    max-width: 375px;
+  }
+  .portfolio-container .animation-portfolio {
+    width: 375px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+/* contact */
+
+
+.contact-section {
+  background-color: #f2f5f9;
+}
+
+form {
+  padding: 20px;
+}
+
+
+
+
+.contact-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  font-weight: 700;
+}
+
+.contact-container label {
+  display: block;
+  font-size: 2rem;
+}
+.contact-container input {
+  width: 80%;
+}
+
+.contact-container input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  border: none;
+  border-bottom: 1px outset gainsboro;
+}
+
+.contact-container select {
+  font-size: 2rem;
+  padding: 10px;
+  width: 80%;
+}
+.contact-container input[type="text-area"] {
+  width: 80%;
+}
+.contact-container button {
+  width: 50%;
+  font-size: 2rem;
+  margin: 20px 0;
+  border-radius: 20px;
+}
+
+/* footer */
+
+.footer-container {
+  height: 50vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+footer div{
+  padding: 20px;
+}
+
+footer span{
+  display: block;
+}
+footer span:nth-of-type(1), span:nth-of-type(5) {
+  font-size: 1.6rem;
+}
+
+footer i {
+  margin: 20px;
+}

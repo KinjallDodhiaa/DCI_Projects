@@ -1,0 +1,27 @@
+.paragraph-1 {
+  font-size: 18px;
+  background-color: orange;
+  
+} 
+
+.paragraph-2 {
+  font-size: 20pt;
+  background-color: aliceblue;
+}
+
+span {
+  font-size: 2pc;
+  background-color: green;
+}
+
+.paragraph-3 {
+  font-size: 1em;
+}
+
+div {
+  height: 80vh;
+  background-color: bisque;
+  width: 60vw;
+  
+}
+

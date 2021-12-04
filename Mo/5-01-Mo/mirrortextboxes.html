@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mirror Text Boxes</title>
+  </head>
+
+  <body>
+    <input type="text" id="text1" onkeyup="Mirror()" />
+    <input type="text" id="text2" />
+  </body>
+
+  <script>
+    //document.getElementById("text1").addEventListener("keyup", Mirror);
+
+    function Mirror() {
+      document.getElementById("text2").value = document.getElementById("text1").value;;
+    }
+  </script>
+</html>

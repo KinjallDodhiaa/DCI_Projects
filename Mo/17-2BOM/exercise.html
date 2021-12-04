@@ -1,0 +1,67 @@
+<!-- Make a webpage that contains a button
+1 - When a visitor clicks on the button a new small window opens
+2 - The new window shows a login webpage(aka username and password)
+3 - control the credentials(e.g., username == admin, password = 123456) when the results were true open a new window
+including a
+welcome message(e.g., welcome to your panel!)
+4 - if the authentication was false - > shows a webpage including a warning message with the visitor browser
+information(e.g., the
+message would be "you are not allowed to enter the user panel, now we collect your browser information
+and report to our IT security department!
+* TIP: the visitor's information can be gained by the properties of the navigator object -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/style.css">
+    <title>BOM</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-container">The Browser Object Model</h1>
+    </header>
+    <main role="main" class="main-container">
+
+        <p>The Browser Object Model (BOM) is the core of JavaScript on the web. The BOM provides you with objects that expose the
+        web browser’s functionality.</p>
+
+        <p>To know more about it please click on the button below</p>
+
+        <button type="submit" class="btn btn-primary btn-lg" onclick="popupwindow('login.html','test',500,500)">
+            Click Me
+        </button>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+    
+    // function windowOpen() {
+    //         window.open('login.html', '', "width=300,height=200")
+    //     }
+    function popupwindow(url, title, w, h) {
+            var left = (screen.width / 2) - (w / 2);
+            var top = (screen.height / 2) - (h / 2);
+            return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+        } 
+
+
+    
+    </script> 
+</body>
+</html>

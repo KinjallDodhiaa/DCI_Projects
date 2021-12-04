@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM and js</title>
+  </head>
+  <body>
+    <h1 id="one">Welcome</h1>
+    <p>This is the welcome message!</p>
+    <h2 id="two">Javscript</h2>
+    <p id="three">This is a cool programming language!</p>
+    <p id="four">This is a cool programming language!</p>
+    <p class="demo">This is a cool programming language!</p>
+    <p class="demo">This is a cool programming language!</p>
+    <p class="demo">This is a cool programming language!</p>
+    <input type="text" id="three" class="testclass" />
+    <input type="text" id="four" class="testclass" />
+    <input type="text" class="testclass" />
+    <input type="text" class="testclass" />
+    <p id="demo"></p>
+  </body>
+  <script>
+    document.getElementById("one").addEventListener("click", warning);
+    document.getElementById("one").addEventListener("click", warning2);
+
+    function warning() {
+      alert("Hello");
+    }
+
+    function warning2() {
+      alert("Welcome");
+    }
+
+    document.getElementById("three").addEventListener("mouseover", warning3);
+
+    function warning3() {
+      alert("yes, it is");
+    }
+
+    let a = document.getElementsByClassName('demo');
+
+    for(let i=0;i<a.length; i++){
+      a[i].addEventListener('click',warning4);
+    }
+
+    function warning4(){
+      alert('Hi');
+    }
+
+    /*<-------------------------------------------------------------------------------------------------------->*/
+    /*document.getElementById("three").addEventListener("click", function () {
+      alert("This is warning message");
+    });*/
+    //<------------------------------------------------------------------------------->
+    document.getElementById("two").onclick = function () {
+      //anonymous function
+      alert("This is another warning message");
+    };
+    //<------------------------------------------------------------------------------->
+    document.getElementById("four").addEventListener("mouseover", mouseOver);
+
+    function mouseOver() {
+      document.getElementById("demo").innerHTML += "Mouseover<br>";
+    }
+
+    //<-------------------------------------------------------------------------------->
+
+    let varP = document.getElementsByTagName("p");
+    varP[0].innerHTML = "This is a warning message";
+
+    //<--------------------------------------------------------------------------------->
+
+    let varClass = document.getElementsByClassName("testclass");
+
+    for (let i = 0; i < varClass.length; i++) {
+      varClass[i].addEventListener("keypress", special);
+    }
+    function special() {
+      alert("This is an array of objects");
+    }
+  </script>
+</html>

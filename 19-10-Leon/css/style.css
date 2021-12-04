@@ -1,0 +1,19 @@
+.serif {
+  font-family: "IBM Plex serif", serif;
+}
+
+.sans-serif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.script {
+  font-family: "Tangerine", cursive;
+}
+
+.monospace {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.display {
+  font-family: Sacramento;
+}

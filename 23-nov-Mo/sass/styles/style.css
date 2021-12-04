@@ -1,0 +1,82 @@
+h1 {
+  text-align: center;
+}
+
+.box-1 {
+  width: 200px;
+  height: 50px;
+  background-color: crimson;
+  color: white;
+}
+
+.box-1:hover {
+  background-color: darkgoldenrod;
+}
+
+.box-2 {
+  width: 150px;
+  height: 100px;
+  background-color: crimson;
+  color: green;
+}
+
+.box-3 {
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+  color: chartreuse;
+}
+
+.box-4 {
+  width: 120px;
+  height: 50px;
+  background-color: crimson;
+  color: green;
+}
+
+.box-5 {
+  width: 100px;
+  height: 50px;
+  background-color: crimson;
+  color: green;
+}
+
+.box-6 {
+  width: 50px;
+  height: 50px;
+  background-color: burlywood;
+  color: green;
+}
+
+.box-7 {
+  width: 80px;
+  height: 80px;
+  background-color: chocolate;
+  color: white;
+}
+
+p {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.border {
+  border: 5px solid gainsboro;
+  -webkit-box-sizing: border;
+          box-sizing: border;
+  border-radius: 10px;
+}
+
+div {
+  margin: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */

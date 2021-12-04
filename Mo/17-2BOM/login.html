@@ -1,0 +1,78 @@
+<!-- Make a webpage that contains a button
+1 - When a visitor clicks on the button a new small window opens
+2 - The new window shows a login webpage(aka username and password)
+3 - control the credentials(e.g., username == admin, password = 123456) when the results were true open a new window
+including a
+welcome message(e.g., welcome to your panel!)
+4 - if the authentication was false - > shows a webpage including a warning message with the visitor browser
+information(e.g., the
+message would be "you are not allowed to enter the user panel, now we collect your browser information
+and report to our IT security department!
+* TIP: the visitor's information can be gained by the properties of the navigator object -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Login Page</title>
+</head>
+<body>
+    <main role="main" class="main-container">
+
+        <div class="container form-margin">
+            <form>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username" />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="text" class="form-control" id="password" />
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg" onclick="verifyAccount(), getBrowserInformation()">
+                        Login
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function verifyAccount(){
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if(username==='admin' && password === '123456'){
+                window.open('/welcome.html');
+            }else {
+                window.open('/warning.html');
+                // document.writeln("<br/>navigator.appCodeName: " + navigator.appCodeName);
+                // document.writeln("<br/>navigator.appName: " + navigator.appName);
+                // document.writeln("<br/>navigator.appVersion: " + navigator.appVersion);
+                // document.writeln("<br/>navigator.cookieEnabled: " + navigator.cookieEnabled);
+                // document.writeln("<br/>navigator.language: " + navigator.language);
+                // document.writeln("<br/>navigator.userAgent: " + navigator.userAgent);
+                // document.writeln("<br/>navigator.platform: " + navigator.platform);
+                // document.writeln("<br/>navigator.onLine: " + navigator.onLine);
+
+            }
+        }
+
+
+
+    </script>   
+</body>
+</html>

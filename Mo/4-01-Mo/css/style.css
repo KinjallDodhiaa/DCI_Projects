@@ -1,0 +1,20 @@
+.contact-form {
+  margin: 50px;
+  padding: 10px;
+}
+
+legend {
+  font-size: 1.8rem;
+  background-color: yellow;
+  padding: 8px 10px;
+  font-weight: 700;
+}
+h3,
+label {
+  font-size: 1.8rem;
+}
+button {
+  margin: 10px 0;
+  padding: 12px 18px;
+  font-size: 1.6rem;
+}

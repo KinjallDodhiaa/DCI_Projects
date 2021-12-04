@@ -1,0 +1,5 @@
+@mixin ChangeBackgroundColorandFontSize ($color, $fontsize) {
+
+    background-color: $color;
+    font-size: $fontsize;  
+  }

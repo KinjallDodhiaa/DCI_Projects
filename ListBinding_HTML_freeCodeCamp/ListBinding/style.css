@@ -1,0 +1,23 @@
+html,body{
+    margin: 0;
+    
+}
+
+.header-container{
+    max-width: 1150px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+header{
+    padding: 40px 0;
+    border-bottom: 1px solid gainsboro;
+}
+
+.main-container{
+    max-width: 950px;
+    padding: 30px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-size: 2rem;
+}

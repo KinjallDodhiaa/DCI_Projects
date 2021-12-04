@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="h1">This is h1</h1>
+    <p id="demo1"></p>
+    <p class="demo2">This a paragraph with first class</p>
+    <p class="demo2">This a paragraph with second class</p>
+    <p class="demo2">This a paragraph with third class</p>
+
+    <form>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary" onclick="checkAccount()">
+        Submit
+      </button>
+    </form>
+  </body>
+
+  <script>
+    function checkAccount() {
+      let varInputEmail = document.getElementById("exampleInputEmail1").value;
+      let varInputPassword = document.getElementById("exampleInputPassword1")
+        .value;
+
+      if (varInputEmail === "admin@123" && varInputPassword === "test123456") {
+        alert("welcome");
+      } else {
+        alert("get out");
+      }
+    }
+
+    let x = document.getElementsByClassName("demo2");
+    x[2].style.color = "blue";
+
+    document.getElementById("demo1").innerHTML = "Hello World";
+
+    // let x = document.getElementsByClassName("demo2");
+    // x[0].innerHTML = "Hi";
+    // x[1].style.backgroundColor = "red";
+
+    let varElem = document.getElementById("h1");
+    varElem.style.color = "blue";
+    varElem.style.fontFamily = "Arial";
+
+    document.getElementById("exampleCheck1").disabled = true;
+
+    /* document.getElementById("exampleInputEmail1").value = "admin@dci";
+    document.getElementById("exampleInputPassword1").value = "123456";
+
+    let varInputEmail = document.getElementById("exampleInputEmail1").value;
+    let varInputPassword = document.getE alert(varInputEmail + " " + varInputPassword);
+lementById("exampleInputPassword1")
+      .value;
+    alert(varInputEmail + " " + varInputPassword); */
+
+    // function checkAccount() {
+    //   let varInputEmail = document.getElementById("exampleInputEmail1").value;
+    //   let varInputPassword = document.getElementById("exampleInputPassword1")
+    //     .value;
+
+    //   if (
+    //     varInputEmail === "admin@daci.org" &&
+    //     varInputPassword === "test123"
+    //   ) {
+    //     alert("welcome to dci");
+    //   } else {
+    //     alert("get out of here");
+    //   }
+    // }
+  </script>
+</html>

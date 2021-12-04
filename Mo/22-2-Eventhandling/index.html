@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <p id="parent">This is <b id="child">paragraph</b></p>  -->
+
+    <div id="one_a">
+        <div id="two">
+            <p id="three_a">
+                I am first paragraph
+                <button id="button1">Button 1</button>
+            </p>
+            <p id="three_b">
+                I am second paragraph
+                <button>Button 2</button>
+                <button>Button 3</button>
+            </p>
+        </div>
+    </div>
+
+    <script>
+
+    let paragraph=document.getElementById('three_a');    
+    let button = document.getElementById('button1');
+    //paragraph.addEventListener('click', clickParagraph);
+    //button.addEventListener('click', clickButton);
+
+    paragraph.addEventListener('click',clickParagraph,true);
+    button.addEventListener('click',clickButton,true);
+
+
+
+    function clickParagraph(){
+        console.log('I am parent of button1');
+    }
+    function clickButton(e){
+        console.log('I am button1');
+        e.stopPropagation();
+    }
+
+      
+    </script>
+  </body>
+</html>
+
+    // let parent = document.getElementById("parent");
+    // let child = document.getElementById("child");
+    
+    // parent.addEventListener("click", clickParent); //when u add the third parameter it will capture the event and it will
+    first print parent and thn child in console.In case of parent it willl only show parent
+    // child.addEventListener("click", clickChild); //when u add the third parameter it will capture the event and it will
+    first print parent and thn child in console.In case of child it will print first parent and thn child
+    
+    // function clickParent() {
+    // console.log("I am the parent!");
+    // }
+    
+    // function clickChild(e) {
+    // console.log("I am the child");
+    // e.stopPropagation();
+    // }

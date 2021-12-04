@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation in js</title>
+</head>
+<body>
+    <h2 id="h2object">This is a simple header text</h2>
+    <button onclick="changeStyle()">Change the style!</button>
+    <h2>How to create DOM objects in javascript</h2>
+    <button onclick="copy()">Copy Me</button>
+
+    <h1>Catch me by QuerySelector</h1>
+    <button onclick="styleQuerySelector()">Change my style!</button>
+
+    <h6>I am h6</h6>
+    <h6>I am h6</h6>
+    <h6>I am h6</h6>
+    <h6>I am h6</h6>
+    <h6>I am h6</h6>
+    <h6>I am h6</h6>
+    <h6>I am h6</h6>
+    <button onclick="styleQuerySelectorAll()">Change all h6 styles</button>
+
+    <h2>How to use innerText and innerHtml</h2>
+    <button id="btnTest" onclick="changeMyText()">I am a button</button>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function changeStyle(){
+            document.querySelector('h2').style.color = 'blue'
+        }
+
+        function copy(){
+            let btn = document.createElement('button');
+            btn.innerText='Copy Me';
+            document.body.appendChild(btn);
+        }
+
+        function styleQuerySelector(){
+            document.querySelector('h1').style.color = 'red';
+        }
+
+        function styleQuerySelectorAll(){
+            let queryAll;
+            queryAll = document.querySelectorAll('h6');
+
+            for(let i=0; i<queryAll.length;i++){
+                queryAll[i].style.color='red';
+            }
+            
+        }
+
+        function changeMyText(){
+
+            let btnTest = document.getElementById('btnTest');
+            //btnTest.innerHTML = 'I am a <b>super button</b>'
+            //btnTest.innerText = 'I am a super button'
+            //document.write("<script>alert('XSS attack')"); // it is a risky method, which can bring XSS (script injection) attacks to our web App
+        }
+    </script>
+</body>
+</html>

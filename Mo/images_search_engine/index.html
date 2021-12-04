@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Images Search Engine</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- code taken from input group in bootstrap -->
+        <div class="input-group mb-3 mt-3">
+          <div class="input-group-prepend">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="searchBtn"
+            >
+              Search
+            </button>
+          </div>
+          <input
+            type="text"
+            id="searchInp"
+            class="form-control"
+            placeholder="Search Word"
+            aria-label=""
+            aria-describedby="basic-addon1"
+          />
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01"
+              >Colors</label
+            >
+          </div>
+          <select class="custom-select" id="colorSelect">
+            <option selected>Choose</option>
+            <option value="grayscale">grayscale</option>
+            <option value="transparent">transparent</option>
+            <option value="red">red</option>
+            <option value="orange">orange</option>
+            <option value="yellow">yellow</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+            <option value="turquoise">turquoise</option>
+            <option value="lilac">lilac</option>
+            <option value="pink">pink</option>
+            <option value="black">black</option>
+          </select>
+        </div>
+      </div>
+      <div class="row" id="resultDiv">
+        <!-- <div class="col-md-3 col-sm-12">
+          <div class="card p-3" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="https://pixabay.com/get/gfece0f91f10b6acd3e84fede101ca86cd6b94e833207fbf5799490357d5a07250e7c418a7c7267cc5c96c365f62dcb1b1241b76473a54ec7dde03e8fb802390f_1280.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <div
+      class="modal fade bd-example-modal-lg"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myLargeModalLabel"
+      aria-hidden="true"
+      id="imgModal"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <img id="bigImg" src="" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

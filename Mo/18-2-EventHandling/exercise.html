@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/18-2-EventHandling/style.css">
+    <title>Event Handlers</title>
+</head>
+<body>
+    <main role="main" class="main-container">
+    
+        <div class="container form-margin">
+            <form>
+                <div class="form-group">
+                    <label for="gameprice">Game Price:</label>
+                    <input type="number" class="form-control" id="gameprice" />
+                </div>
+                <div class="form-group">
+                    <label for="discount">Discount:</label>
+                    <input type="number" class="form-control" id="discount" />
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg" id="button">
+                        Click
+                    </button>
+                </div>
+                <p id="demo"></p>
+            </form>
+        </div>
+    </main>
+
+    
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+
+            let gamePrice=document.getElementById('gameprice').value;
+            let discountPrice=document.getElementById('discount').value;
+            let button=document.getElementById('button');
+            button.addEventListener('click', myFunction);
+            
+            function myFunction(){
+                let gamePrice = document.getElementById('gameprice').value;
+                let discountPrice = document.getElementById('discount').value;
+                let newWindow = window.open('price.html', '', "width=300,height=200")
+
+            }
+
+            /** function popup(){
+            let sameprice=document.getElementById("sameprice").value;
+            let discount=document.getElementById("discount").value;
+            let result="$("+parseInt(sameprice*discount)+") off!" ; // 100 * 0.5 = 50
+            let left = (screen.width/2)-(500/2);
+            let top = (screen.height/2)-(500/2);
+            let win= window.open("popup.html", "", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+500+', height='+500+', top='+top+', left='+left);
+
+            if(win.document){
+                win.document.write(result) ; // dynamic text
+            }
+}
+*/
+
+        </script>
+</body>
+</html>

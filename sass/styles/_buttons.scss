@@ -1,0 +1,55 @@
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: $FontSizeSpecial;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+
+
+
+  
+  
+  .button1 {
+    
+   @include ChangeBackgroundColorandFontSize (rgb(31, 50, 224), 5 * 5px);
+
+    color: black; 
+    border: 2px solid $BtnColor;
+
+    &:hover {
+        background-color: #4CAF50;
+        color: $BtnHoverColor;
+      }
+  }
+  
+
+  
+  .button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid $BtnColor;
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: $BtnHoverColor;
+  }
+
+    
+  .button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid $BtnColor;
+  }
+  
+  .button3:hover {
+    background-color: #c9ab27;
+    color: $BtnHoverColor;
+  }
